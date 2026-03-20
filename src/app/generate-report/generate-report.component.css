@@ -1,0 +1,161 @@
+/* General Form Styling */
+form {
+    background-color: #ecfadc; /* Light background for form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #56ae57; /* Matches the green from home.component.css */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a247;
+  }
+  
+  /* Report Section Styling */
+  .report-section {
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #e5d3b3; /* Matches the beige header from home.css */
+    color: #000;
+    font-weight: 700;
+  }
+  
+  table td {
+    background-color: #fff; /* White background for table data */
+  }
+  
+  table tbody tr:hover {
+    background-color: #f2f2f2; /* Light hover effect */
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: #333;
+  }
+  
+  /* No Data Message Styling */
+  .no-data {
+    color: #888;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Aligning the content within the container */
+  .container {
+    padding: 20px;
+    background-color: #ecfadc;
+    margin: 0 auto;
+    max-width: 1200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    background-color: #56ae57; /* Consistent CTA button color */
+    padding: 15px 30px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  canvas {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+  .cta-btn:hover {
+    background-color: #45a247;
+  }
+  
+  @media (max-width: 768px) {
+    /* Responsive layout */
+    form, .report-section {
+      padding: 15px;
+    }
+  
+    table, form input, form select {
+      font-size: 14px;
+    }
+  }
+
+  .error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input.ng-invalid.ng-touched {
+    border-color: red;
+  }
+  

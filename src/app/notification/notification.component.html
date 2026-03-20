@@ -1,0 +1,29 @@
+<div class="notification-container">
+  <!-- Admin Broadcast Section (only visible to admins) -->
+  <div class="admin-section" *ngIf="isAdmin">
+    <h3>Broadcast Community Announcement</h3>
+    <div class="broadcast-form">
+      <textarea [(ngModel)]="newNotification.message" placeholder="Enter announcement message" rows="4"></textarea>
+      <button (click)="broadcastAnnouncement()">Send Announcement</button>
+    </div>
+  </div>
+
+  <!-- Notifications List (visible to all users) -->
+  <h3>Notifications</h3>
+  <div class="notifications-list">
+    <div class="notification-item" *ngFor="let notification of notifications" 
+         (click)="viewNotificationDetails(notification)">
+      <div class="notification-header">
+        <span class="event-type">{{ notification.eventType }}</span>
+        <span class="date">{{ notification.date | date:'short' }}</span>
+      </div>
+      <div class="notification-message">
+        {{ notification.message }}
+      </div>
+    </div>
+    
+    <div *ngIf="notifications.length === 0" class="no-notifications">
+      No notifications available
+    </div>
+  </div>
+</div>

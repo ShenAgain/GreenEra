@@ -1,0 +1,91 @@
+<h2>Generate Reports</h2>
+
+<!-- Form to select report type and filters -->
+<form [formGroup]="reportForm">
+  <div>
+    <label for="reportType">Report Type:</label>
+    <select id="reportType" formControlName="reportType">
+      <option value="pickupStats">Pickup Statistics</option>
+      <option value="issueReport">Reported Issues</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="area">Area (optional):</label>
+    <input type="text" id="area" formControlName="area">
+  </div>
+
+  <div class="form-group" >
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" formControlName="startDate">
+    <div *ngIf="reportForm.get('startDate').touched && reportForm.get('startDate').invalid" class="error-message">
+      <span *ngIf="reportForm.get('startDate').errors?.['required']">Please select a start date</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" formControlName="endDate">
+    <div *ngIf="reportForm.get('endDate').touched && reportForm.get('endDate').invalid" class="error-message">
+      <span *ngIf="reportForm.get('endDate').errors?.['required']">Please select an end date</span>
+    </div>
+  </div>
+
+  <div>
+    <label for="wasteType">Waste Type (optional):</label>
+    <input type="text" id="wasteType" formControlName="wasteType">
+  </div>
+
+  <button type="button" (click)="generateReport()"[disabled]="!reportForm.valid">Generate Report</button>
+  <button type="button" (click)="resetForm()">Reset</button>
+</form>
+
+<!-- Display generated report -->
+<div *ngIf="reportData.data.length > 0">
+  <h3>{{ reportData.title }}</h3>
+
+  <!-- The canvas for the chart -->
+  <div class="chart-section">
+    <canvas id="reportChart"></canvas>
+  </div>
+
+  <!-- Table representation of the report data -->
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let column of reportData.columns">{{ column }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of reportData.data">
+      <td>{{ row.date }}</td>
+      <td>{{ row.time }}</td>
+      <td>{{ row.wasteType }}</td>
+      <td>{{ row.address }}</td>
+      <td>{{ row.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- Summary section using keyvalue pipe -->
+  <div *ngIf="reportData.summary">
+    <h4>Summary</h4>
+    <div *ngFor="let item of reportData.summary | keyvalue">
+      <strong>{{item.key}}:</strong> {{item.value}}
+    </div>
+  </div>
+
+<!-- If no data, show message -->
+<div *ngIf="reportData.data.length === 0 && !loading">
+  <p>No data available for the selected criteria.</p>
+</div>
+
+<!-- Loading spinner -->
+<div *ngIf="loading">
+  <p>Loading report, please wait...</p>
+</div>
+
+<!-- Error message -->
+<div *ngIf="error">
+  <p class="error">{{ error }}</p>
+</div>

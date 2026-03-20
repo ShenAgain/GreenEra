@@ -1,0 +1,30 @@
+<div class = 'sandy'>
+  <h2>Pickup History</h2>
+  
+  <!-- Check if there are any pickups in the history -->
+  <table *ngIf="history.length > 0; else noHistory">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Waste Type</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Iterate over each pickup in the history -->
+      <tr *ngFor="let pickup of history">
+        <td>{{ pickup.date }}</td>
+        <td>{{ pickup.time }}</td>
+        <td>{{ pickup.wasteType }}</td>
+        <td>{{ pickup.address }}</td> 
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- If no pickups exist, show this message -->
+  <ng-template #noHistory>
+    <p>No pickups available.</p>
+  </ng-template>
+  
+  </div>

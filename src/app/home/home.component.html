@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Era - Waste Management</title>
+    <link rel="stylesheet" href="home.component.css">
+</head>
+<body>
+
+    <!-- Sidebar and Hamburger Menu -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <ul>
+            <li><a href="schedule-pickup.component"><b>Schedule Waste PickUp</b></a></li>
+            <li><a href="view-pickup-history.component"><b>View Waste Pick Up</b></a></li>
+            <li><a href="report-issue.component"><b>Report Issues</b></a></li>
+            <li><a href="notification.component"><b>Manage Notifications</b></a></li>
+            <li><a href="generate-report.component"><b>Report</b></a></li>
+        </ul>
+    </div>
+
+    
+<!-- Cover Section -->
+<section class="cover-section">
+    <div class="cover-content">
+        <img src="https://i.ibb.co/vZw0zzL/Green-Era-Logo.png" alt="GreenEra Logo" class="logo">
+        <h2>Let's Promote Clean Habits <br>
+            & Efficient Waste Management</h2>
+        <p>Discover how you can make smarter recycling choices, track waste pickups, and access community resources right at your fingertips.</p>
+        <a routerLink="/recycling-guide" class="cta-btn">Recycling Guide</a>
+    </div>
+</section>
+
+<!-- Card Section Wrapper with Full Width Background -->
+<div class="full-width-section">
+    <div class="card-section">
+        <!-- Scheduling Pickup Card -->
+        <a routerLink="/schedule-pickup" class="card">
+            <img src="https://i.ibb.co/LPptwX5/schedicon.png"  alt="Scheduling Pickup Icon">
+            <h3>Scheduling Pickup</h3>
+            <p>Schedule a waste pick up at your convenience.</p>
+        </a>
+        
+        <!-- Report an Issue Card -->
+        <a routerLink="/report-issue" class="card">
+            <img src="https://i.ibb.co/KrzCHN7/Report-issue-icon.png" alt="Report an Issue Icon">
+            <h3>Report an Issue</h3>
+            <p>Easily notify us of missed pickups or waste issues.</p>
+        </a>
+        
+        <!-- Notifications and Alerts Card -->
+        <a routerLink="/notification" class="card">
+            <img src="https://i.ibb.co/vBzpnw5/notif-icon.png" alt="Notifications and Alerts Icon">
+            <h3>Notifications and Alerts</h3>
+            <p>Receive reminders and important updates about waste management.</p>
+        </a>
+        
+        <!-- Generate Report Card -->
+         <a routerLink="/generate-report" class="card">
+        <a class="card">
+            <img src="https://i.ibb.co/T0DwLRM/generate-report-icon.png" alt="Generate Report Icon">
+            <h3>Generate Report</h3>
+            <p>Pickup statistics, reported issues, and recycling rates.</p>
+        </a>
+        </a>
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* Main form container */
+.container {
+    background-color: #ecfadc; /* Slightly lighter color to blend better */
+    padding: 40px;
+    margin: 100px;
+    border-radius: 10px;
+    max-width: 0 auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow for better visual hierarchy */
+    text-align: left; /* Ensure text aligns neatly */
+  }
+  
+  /* General form styles */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fdfdfd;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #56ae57;
+    box-shadow: 0 0 5px rgba(86, 174, 87, 0.3); /* Subtle focus glow */
+  }
+  
+  /* Submit button styling */
+  .btn-primary {
+    display: inline-block;
+    background-color: #56ae57;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #5a3825;
+    box-shadow: 0 4px 12px rgba(90, 56, 37, 0.4); /* Button shadow effect */
+  }
+  
+  /* Success and error messages */
+  .alert {
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .alert-success {
+    background-color: #56ae57;
+    color: white;
+  }
+  
+  .alert-danger {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  /* Remove the red debug outlines */
+  * {
+    outline: none !important;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  
+    .btn-primary {
+      font-size: 1rem;
+      padding: 12px 20px;
+    }
+  }
+  

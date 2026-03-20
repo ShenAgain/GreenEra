@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.spongebob {
+    overflow: hidden;
+    margin-top: -100px;
+}
+
+/* Header Styles */
+.header {
+    background-color: #e5d3b3;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+.logo img {
+    height: 50px;
+    margin: 0 auto;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.profile-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Schedule Pickup Section Styles */
+.schedule-pickup-section {
+    background-color: #ecfadc;
+    margin-top: 10%;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.schedule-pickup-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.schedule-pickup-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-pickup-section form label {
+    display: block;
+    text-align: left;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.schedule-pickup-section form input,
+.schedule-pickup-section form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.schedule-pickup-section form button {
+    background-color: #56ae57;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.schedule-pickup-section form button:hover {
+    background-color: #5a3825;
+}

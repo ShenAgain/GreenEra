@@ -1,0 +1,85 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.sandy{
+    margin-top: 100px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #e5d3b3; /* Matches the header color in your home component */
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+/* No History Message */
+.no-history {
+    text-align: center;
+    color: #999;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}

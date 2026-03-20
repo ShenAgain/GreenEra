@@ -1,0 +1,19 @@
+.notification-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ecfadc;
+    margin-top: 50px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+  }

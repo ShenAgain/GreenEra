@@ -1,0 +1,27 @@
+<div class="spongebob">
+
+    <!-- Schedule Pickup Section -->
+    <section class="schedule-pickup-section">
+        <h2>Schedule Waste Pickup</h2>
+        <form (ngSubmit)="scheduleWastePickup()">
+            <label for="date">Date</label>
+            <input id="date" type="date" [(ngModel)]="pickup.date" name="date" required>
+    
+            <label for="time">Time</label>
+            <input id="time" type="time" [(ngModel)]="pickup.time" name="time" required>
+    
+            <label for="wasteType">Type of Waste</label>
+            <select id="wasteType" [(ngModel)]="pickup.wasteType" name="wasteType" required>
+                <option value="Household">Household</option>
+                <option value="Recyclable">Recyclable</option>
+                <option value="Hazardous">Hazardous</option>
+            </select>
+    
+            <label for="address">Address</label>
+            <input id="address" type="text" [(ngModel)]="pickup.address" name="address" required>
+    
+            <button type="submit">Schedule Pickup</button>
+        </form>
+    </section>
+
+</div>
